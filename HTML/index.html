@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Brocoli Studios</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../CSS/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+  src="../JS/jquery.js"
+></script>
+<script src="../JS/checkout.js"></script>
+
+
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    .mySlides {
+      display: none;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a
+          href="#band"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >SOBRE NOSOTROS</a
+        >
+        <a
+          href="#tour"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >RESERVA</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >CONTACTO</a>
+
+          <a
+          href="./checkout.html"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >CARRITO</a>
+        
+
+        <a
+          href="javascript:void(0)"
+          class="w3-padding-large w3-hover-red w3-hide-small w3-right"
+          ><i class="fa fa-search"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px"
+    >
+      <a
+        href="#band"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >SOBRE NOSOTROS</a
+      >
+      <a
+        href="#tour"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >RESERVA</a
+      >
+      <a
+        href="#contact"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >CONTACTO</a
+      >
+
+    </div>
+
+
+      <!-- SOBRE NOSOTRODS -->
+      <div
+        class="w3-container w3-content w3-center w3-padding-64"
+        style="max-width: 800px"
+        id="band"
+      >
+        <h2 class="w3-wide" style="margin-top: 5vh;">BROCOLI STUDIOS</h2>
+        <img src="../img/logo.png" alt="Logo" style="width: 10vw;">
+        <p class="w3-opacity"><i>We love music</i></p>
+        <p class="w3-justify">
+            Oh, let the sun beat down upon my face And stars fill my dream I'm a traveler of both time and space, To be where I have been.To sit with elders of the gentle race
+            This world has seldom seen. They talk of days for which they sit and wait
+            All will be revealed.Talk in song from tongues of lilting grace
+            Sounds caress my ear.And not a word I heard could I relate
+            The story was quite clear.Oh, baby, I been blind
+            Oh, yeah, mama, there ain't no denyin'.Oh, ooh yes, I been blind
+            Mama, mama, ain't no denyin', no denyin'.All I see turns to brown
+            As the sun burns the ground.And my eyes fill with sand
+            As I scan this wasted land. Try to find, try to find the way I feel.
+        </p>
+        </div>
+      </div>
+
+      <!-- RESERVA -->
+      <div class="w3-black" id="tour">
+        <div
+          class="w3-container w3-content w3-padding-64"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide w3-center">RESERVA TU SESION</h2>
+         
+
+
+          <div class="w3-row-padding w3-padding-32" style="margin: 0 -16px">
+            <div class="w3-third w3-margin-bottom">
+             
+              <img
+                src="../img/jagger.png"
+                alt="Sesion Jagger"
+                style="width: 100%"
+                class="w3-hover-opacity"
+              />
+         
+              <div class="w3-container w3-white">
+                <h3 class="product-name"><b>Sesión Jagger</h3></p>
+                <p>Duración: 1hr</p>
+                <p>Precio: $700</p>
+                <button
+                  class="boton-carrito"
+                  onclick="document.getElementById('ticketModal').style.display='block'"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+            
+              <img 
+                src="../img/plant.png"
+                alt="Sesion Plant"
+                style="width: 100%" 
+                class="w3-hover-opacity" > </img>
+            
+          
+              <div class="w3-container w3-white">
+                <h3 class="product-name"><b>Sesión Plant</b></h3>
+                <p>Duración: 2hr</p>
+                <p>Precio: $1400</p>
+                <button
+                  class="boton-carrito"
+                  onclick="document.getElementById('ticketModal').style.display='block'"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+              <img
+                src="../img/ozzy.png"
+                alt="Ozzy"
+                style="width: 100%"
+                class="w3-hover-opacity"
+              />
+              <div class="w3-container w3-white">
+                <h3 class="product-name"><b>Sesión Ozzy</b></h3>
+                <p>Duración: 3hr</p>
+                <p>Precio: $2000</p>
+                <button
+                  class="boton-carrito"
+                  onclick="document.getElementById('ticketModal').style.display='block'"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div
+        class=" boton-carritow3-container w3-content w3-padding-64"
+        style="max-width: 800px"
+        id="contact"
+      >
+        <h2 class="w3-wide w3-center">CONTACTO</h2>
+        <div class="w3-row w3-padding-32">
+          <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width: 30px"></i> Buenos Aires, Palermo.<br />
+            <i class="fa fa-phone" style="width: 30px"></i> Phone: +5411 334675<br />
+            <i class="fa fa-envelope" style="width: 30px"> </i> Email: brocoli_studios@gmail.com<br />
+          </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- End Page Content -->
+    </div>
+
+    <!-- Image of location/map -->
+    <img
+      src="/w3images/map.jpg"
+      class="w3-image w3-greyscale-min"
+      style="width: 100%"
+    />
+
+    <!-- Footer -->
+    <footer
+      class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge"
+    >
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      
+    </footer>
+  </body>
+</html>
