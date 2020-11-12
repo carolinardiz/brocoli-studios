@@ -51,4 +51,12 @@ $(document).ready(function () {
   }
 
   //hasta aca el carrito
+
+  //PASO 2 : AGENDA
+
+  //PASO 3: INFO
+
+  $("#myForm").submit(function () {
+    return false;
+  });
 });

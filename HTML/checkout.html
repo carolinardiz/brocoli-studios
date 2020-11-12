@@ -56,22 +56,6 @@
           class="w3-bar-item w3-button w3-padding-large w3-hide-small"
           >CARRITO</a>
         
-        <div class="w3-dropdown-hover w3-hide-small">
-          <button class="w3-padding-large w3-button" title="More">
-            MORE <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-            <a href="#" class="w3-bar-item w3-button">Extras</a>
-            <a href="#" class="w3-bar-item w3-button">Media</a>
-          </div>
-        </div>
-        <a
-          href="javascript:void(0)"
-          class="w3-padding-large w3-hover-red w3-hide-small w3-right"
-          ><i class="fa fa-search"></i
-        ></a>
-      </div>
     </div>
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
@@ -106,7 +90,7 @@
       >
     </div>
   </header>
-<body></body>
+<body>
 
     <div class="container">
 
@@ -129,31 +113,41 @@
               Carrito
           </h2>
           
+          <div id="productos"></div>
           
           <p id="total">
               Total:
           </p>
           
-          <div id="productos">
-          
-          </div> 
+        
           <button>Confirmar</button>
         </div>
           
         
   
-
-      <p id="step-2" class="check-out-hidden">
-        paso 2
-        <button>Continuar</button>
+        <div id="step-2" class="check-out-hidden">
+      <p>
+            Acá va a ir un calendario para agendar las sesiones
+            (WIP)
       </p>
+      <button>Continuar</button>
+    </div>
 
-      <p id="step-3"  class="check-out-hidden">
-        paso 3
-        <button>Aceptar</button>
-      </p>
+      <div id="step-3"  class="check-out-hidden">
+      <form id="myForm" >
 
-      <p id="step-4" class="check-out-hidden" >Gracias por reservar!</p>
+        <input type="text" placeholder="Nombre">
+       
+        <input type="text" placeholder="Apellido">
+
+        <input type="text" placeholder="Email">
+       
+        <button>Aceptar</button>  
+      </form>
+   
+    </div>
+
+      <p id="step-4" class="check-out-hidden">Gracias por reservar!</p>
 
     </div>
     
