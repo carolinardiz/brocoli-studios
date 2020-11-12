@@ -1,6 +1,6 @@
 var currentStep = 1;
 $(document).ready(function () {
-  $("boton-carrito").click(handleStep);
+  $("button").click(handleStep);
   //carrito
   var carrito = JSON.parse(localStorage.getItem("carrito"));
   document
@@ -13,27 +13,14 @@ $(document).ready(function () {
   localStorage.setItem("carrito", JSON.stringify([]));
 
   function handleStep(stepNumber) {
-    $("#step_" + currentStep).attr("class", "check-out-hidden");
+    $("#step-" + currentStep).attr("class", "check-out-hidden");
+    $("#step-indicator-" + currentStep).removeClass("active");
     currentStep = currentStep + 1;
-    $("#step_" + currentStep).attr("class", "check-out");
+    $("#step-" + currentStep).attr("class", "check-out");
+    $("#step-indicator-" + currentStep).addClass("active");
   }
 
   // funciones del carrito
-
-  function agregarAlCarrito(event) {
-    let producto = {
-      nombre: $(event.target).siblings(".product-name").text(),
-      precio: parseInt(
-        $(event.target).siblings("p").text().replace("$", "").trim()
-      ),
-    };
-
-    var carrito = JSON.parse(localStorage.getItem("carrito"));
-    carrito.push(producto);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-  console.log($(".boton-carrito").length);
-  $(".boton-carrito").click(agregarAlCarrito);
 
   function generarListaDeProductos(array) {
     // Create the list element:

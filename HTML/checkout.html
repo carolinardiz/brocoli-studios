@@ -52,7 +52,7 @@
           >CONTACTO</a>
 
           <a
-          href="./checkout.html"
+          href="../checkout.html"
           class="w3-bar-item w3-button w3-padding-large w3-hide-small"
           >CARRITO</a>
         
@@ -112,17 +112,17 @@
 
 
       <ul class="steps">
-        <li class="steps__li">1</li>
-        <li class="steps__li">2</li>
-        <li class="steps__li">3</li>
-        <li class="steps__li active">4</li>
+        <li class="steps__li active" id="step-indicator-1">1</li>
+        <li class="steps__li" id="step-indicator-2">2</li>
+        <li class="steps__li"  id="step-indicator-3">3</li>
+        <li class="steps__li" id="step-indicator-4">4</li>
       </ul> 
 
       
       <h1 class="container__h1">Check-out</h1>
 
-      <p id="step-1" class="check-out">
-        <div>
+    
+        <div id="step-1" class="check-out">
 
 
           <h2>
@@ -137,11 +137,11 @@
           <div id="productos">
           
           </div> 
-          
+          <button>Confirmar</button>
         </div>
           
-        <button>Confirmar</button>
-      </p>
+        
+  
 
       <p id="step-2" class="check-out-hidden">
         paso 2
@@ -153,7 +153,7 @@
         <button>Aceptar</button>
       </p>
 
-      <p  class="check-out-hidden" >Gracias por reservar!</p>
+      <p id="step-4" class="check-out-hidden" >Gracias por reservar!</p>
 
     </div>
     

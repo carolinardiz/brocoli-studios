@@ -12,7 +12,7 @@
   <script
   src="../JS/jquery.js"
 ></script>
-<script src="../JS/checkout.js"></script>
+<script src="../JS/index.js"></script>
 
 
 
@@ -136,13 +136,14 @@
                 class="w3-hover-opacity"
               />
          
-              <div class="w3-container w3-white">
+              <div class="w3-container w3-white product">
                 <h3 class="product-name"><b>Sesión Jagger</h3></p>
                 <p>Duración: 1hr</p>
                 <p>Precio: $700</p>
                 <button
                   class="boton-carrito"
-                  onclick="document.getElementById('ticketModal').style.display='block'"
+                  product-id="SesionJagger" 
+              
                 >
                   Agregar al carrito
                 </button>
@@ -157,32 +158,32 @@
                 class="w3-hover-opacity" > </img>
             
           
-              <div class="w3-container w3-white">
+              <div class="w3-container w3-white product">
                 <h3 class="product-name"><b>Sesión Plant</b></h3>
                 <p>Duración: 2hr</p>
-                <p>Precio: $1400</p>
+                <p id="precio">Precio: $1400</p>
                 <button
                   class="boton-carrito"
-                  onclick="document.getElementById('ticketModal').style.display='block'"
+                  product-id="SesionPlant"  
                 >
                   Agregar al carrito
                 </button>
               </div>
             </div>
-            <div class="w3-third w3-margin-bottom">
+            <div class="w3-third w3-margin-bottom product">
               <img
                 src="../img/ozzy.png"
                 alt="Ozzy"
                 style="width: 100%"
                 class="w3-hover-opacity"
               />
-              <div class="w3-container w3-white">
+              <div class="w3-container w3-white product">
                 <h3 class="product-name"><b>Sesión Ozzy</b></h3>
                 <p>Duración: 3hr</p>
                 <p>Precio: $2000</p>
                 <button
                   class="boton-carrito"
-                  onclick="document.getElementById('ticketModal').style.display='block'"
+                  product-id="SesionOzzy" 
                 >
                   Agregar al carrito
                 </button>

@@ -1610,31 +1610,8 @@ a {
   position: relative;
 }
 
-.steps__li::before {
-  content: "";
-  position: absolute;
-  top: 0.9em;
-  left: -4em;
-  width: 4em;
-  height: 0.2em;
-  background: dodgerblue;
-  z-index: -1;
-}
-
-.steps__li:first-child::before {
-  display: none;
-}
-
-.steps__li .active {
-  background: dodgerblue;
-}
-
-.steps__li .active ~ li {
-  background: lightblue;
-}
-
-.steps-line__li .active ~ li::before {
-  background: lightblue;
+.active {
+  background: pink;
 }
 
 .check-out {
