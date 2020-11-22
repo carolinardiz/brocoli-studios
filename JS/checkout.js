@@ -10,8 +10,6 @@ $(document).ready(function () {
     .getElementById("total")
     .appendChild(document.createTextNode(" $" + calcularTotal(carrito)));
 
-  localStorage.setItem("carrito", JSON.stringify([]));
-
   function handleStep(stepNumber) {
     $("#step-" + currentStep).attr("class", "check-out-hidden");
     $("#step-indicator-" + currentStep).removeClass("active");
@@ -54,9 +52,40 @@ $(document).ready(function () {
 
   //PASO 2 : AGENDA
 
+  var options = $.extend(
+    {}, // empty object
+    $.datepicker.regional["en-US"],
+    {
+      dateFormat: "mm/dd/yy",
+    } // your custom options
+  );
+
+  $("#datepicker").datepicker(options);
+
+  $("#boton-agenda").click(saveInfo);
+
+  function saveInfo() {
+    var kart = JSON.parse(localStorage.getItem("carrito"));
+    let datePicker = $("#datepicker").val();
+    for (var j = 0; j < kart.length; j++) {
+      kart[j].fecha = datePicker;
+    }
+    localStorage.setItem("carrito", JSON.stringify(kart));
+  }
+
   //PASO 3: INFO
 
   $("#myForm").submit(function () {
     return false;
+  });
+
+  $("#boton-3").click(function showInfo() {
+    var reserva = localStorage.getItem("carrito");
+    reserva = JSON.parse(reserva);
+    for (var x = 0; x < reserva.length; x++) {
+      $("#listaFinal").append(
+        "<li>" + reserva[x].nombre + " " + reserva[x].fecha + "</li>"
+      );
+    }
   });
 });

@@ -1,155 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Check-out</title>
 
-    <link rel="stylesheet" href="../CSS/main.css">
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="../JS/jquery.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check-out</title>
+
+  <link rel="stylesheet" href="../CSS/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="../JS/jquery.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js">
+  </script>
+
+  <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js">
+  </script>
     <script src="../JS/checkout.js"></script>
 
   <style>
     body {
       font-family: "Lato", sans-serif;
     }
+
     .mySlides {
       display: none;
     }
   </style>
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-black w3-card">
-        <a
-          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-          href="javascript:void(0)"
-          onclick="myFunction()"
-          title="Toggle Navigation Menu"
-          ><i class="fa fa-bars"></i
-        ></a>
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a
-          href="index.html"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >SOBRE NOSOTROS</a
-        >
-        <a
-          href="index.html"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >RESERVA</a
-        >
-        <a
-          href="index.html"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >CONTACTO</a>
 
-          <a
-          href="../checkout.html"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >CARRITO</a>
-        
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SOBRE NOSOTROS</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVA</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTO</a>
+
+      <a href="../checkout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CARRITO</a>
+
     </div>
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div
-      id="navDemo"
-      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
-      style="margin-top: 46px"
-    >
-      <a
-        href="#band"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >SOBRE NOSOTROS</a
-      >
-      <a
-        href="#tour"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >RESERVA</a
-      >
-      <a
-        href="#contact"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >CONTACTO</a
-      >
-      <a
-        href="#"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Merchandise</a
-      >
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px">
+      <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SOBRE NOSOTROS</a>
+      <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESERVA</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTO</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Merchandise</a>
     </div>
-  </header>
-<body>
+    </header>
 
-    <div class="container">
+    <body>
+
+      <div class="container-check-out">
 
 
-      <ul class="steps">
-        <li class="steps__li active" id="step-indicator-1">1</li>
-        <li class="steps__li" id="step-indicator-2">2</li>
-        <li class="steps__li"  id="step-indicator-3">3</li>
-        <li class="steps__li" id="step-indicator-4">4</li>
-      </ul> 
+        <ul class="steps">
+          <li class="steps__li active" id="step-indicator-1">1</li>
+          <li class="steps__li" id="step-indicator-2">2</li>
+          <li class="steps__li" id="step-indicator-3">3</li>
+          <li class="steps__li" id="step-indicator-4">4</li>
+        </ul>
 
-      
-      <h1 class="container__h1">Check-out</h1>
 
-    
+        <h1 class="container__h1">CHECK-OUT</h1>
+
         <div id="step-1" class="check-out">
 
 
-          <h2>
-              Carrito
+          <h2 class="carrito-title">
+            CARRITO
           </h2>
-          
+
           <div id="productos"></div>
-          
+
           <p id="total">
-              Total:
+            Total:
           </p>
-          
-        
+
+
           <button>Confirmar</button>
         </div>
-          
-        
-  
+
+
+
         <div id="step-2" class="check-out-hidden">
-      <p>
-            Acá va a ir un calendario para agendar las sesiones
-            (WIP)
-      </p>
-      <button>Continuar</button>
-    </div>
+          
+          <form action="calendar">
+            <input type="text" id="datepicker" placeholder="Elegí una fecha">
+          </form>
 
-      <div id="step-3"  class="check-out-hidden">
-      <form id="myForm" >
 
-        <input type="text" placeholder="Nombre">
-       
-        <input type="text" placeholder="Apellido">
 
-        <input type="text" placeholder="Email">
-       
-        <button>Aceptar</button>  
-      </form>
-   
-    </div>
+          <button id="boton-agenda">Continuar</button>
+        </div>
 
-      <p id="step-4" class="check-out-hidden">Gracias por reservar!</p>
+        <div id="step-3" class="check-out-hidden">
+          <form id="myForm">
 
-    </div>
-    
-  </body>
+            <input type="text" placeholder="Nombre">
+
+            <input type="text" placeholder="Apellido">
+
+            <input type="text" placeholder="Email">
+
+            <button id="boton-3">Aceptar</button>
+          </form>
+
+        </div>
+
+        <div id="step-4" class="check-out-hidden">
+          <p>Gracias por reservar: </p>
+        <ul id="listaFinal">
+        </ul>
+
+        </div>
+
+      </div>
+    </body>
+
 </html>

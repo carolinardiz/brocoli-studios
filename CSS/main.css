@@ -1615,7 +1615,10 @@ a {
 }
 
 .check-out {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
 }
 .check-out-hidden {
   display: none;
@@ -1647,27 +1650,29 @@ a {
   text-align: center;
   background-color: #adb5bd;
   color: white;
-  width: 30vw;
+  width: 80vw;
 }
 
 .steps {
-  width: 100vw;
+  width: 80vw;
   display: flex;
-  justify-content: left;
-  margin-left: 4vw;
-}
-
-.container {
-  background-color: #f8f9fa;
-  width: 30vw;
-  margin-left: 5vw;
-  margin-top: 5vw;
+  justify-content: center;
+  margin: 3vw;
 }
 
 .container h2 {
   font-size: x-large;
   background-color: #e9ecef;
   padding-left: 5vw;
+  margin-left: 5vw;
+}
+
+.carrito-title {
+  font-size: x-large;
+  font-weight: 600;
+  color: green;
+  text-align: center;
+  width: 80vw;
 }
 
 #total {
@@ -1726,4 +1731,21 @@ form {
 footer {
   display: flex;
   justify-content: center;
+}
+
+.container-check-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  background-image: url(../img/check-out.png);
+  background-position: center;
+  margin: 10vw;
+}
+
+#productos {
+  color: #343a40;
+  font-size: large;
+  font-weight: 500;
+  width: 80vw;
 }
