@@ -206,7 +206,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 400;
   margin: 10px 0;
 }
@@ -1593,8 +1592,30 @@ a {
 
 /*Carrito*/
 
+.body-checkout {
+  background-image: url(../img/beatles.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+}
+
+.container-check-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: #f9f6f2;
+}
+
 .steps {
   margin-top: 5vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  margin: 3vw;
+  padding-inline-start: 0px;
 }
 
 .steps__li {
@@ -1605,7 +1626,9 @@ a {
   border-radius: 1em;
   background: green;
   margin: 0 1em;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   color: white;
   position: relative;
 }
@@ -1618,18 +1641,24 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80vw;
+  width: 40vw;
 }
 .check-out-hidden {
   display: none;
 }
 
-.boton-carrito {
+button {
   color: grey;
   border: 2vw, black solid;
-  margin: 2vw;
-  size: large;
+  margin: auto;
+  width: 10vw;
+  margin: auto;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
 }
+
 :hover {
   color: black;
 }
@@ -1650,14 +1679,7 @@ a {
   text-align: center;
   background-color: #adb5bd;
   color: white;
-  width: 80vw;
-}
-
-.steps {
-  width: 80vw;
-  display: flex;
-  justify-content: center;
-  margin: 3vw;
+  width: 40vw;
 }
 
 .container h2 {
@@ -1670,15 +1692,17 @@ a {
 .carrito-title {
   font-size: x-large;
   font-weight: 600;
-  color: green;
+  color: #403d39;
   text-align: center;
-  width: 80vw;
+  width: 40vw;
 }
 
 #total {
   font-size: x-large;
-  padding-left: 5vw;
   background-color: #e9ecef;
+  margin: auto;
+  text-align: center;
+  width: 40vw;
 }
 
 .container button {
@@ -1712,10 +1736,6 @@ form {
   padding: 1vh;
 }
 
-#step-3 {
-  margin-left: 5vw;
-}
-
 #step-3 input {
   margin-bottom: 1vw;
 }
@@ -1723,9 +1743,8 @@ form {
 #step-4 {
   font-size: large;
   font-weight: 600;
-  color: green;
+  color: #343a40;
   text-align: center;
-  margin-left: 9vw;
 }
 
 footer {
@@ -1733,19 +1752,23 @@ footer {
   justify-content: center;
 }
 
-.container-check-out {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80vw;
-  background-image: url(../img/check-out.png);
-  background-position: center;
-  margin: 10vw;
-}
-
 #productos {
   color: #343a40;
   font-size: large;
   font-weight: 500;
   width: 80vw;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.mensajeFinal {
+  font-size: x-large;
+  background-color: #e9ecef;
+  margin: auto;
+  text-align: center;
+  width: 40vw;
+  margin-bottom: 5vw;
 }
