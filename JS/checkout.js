@@ -24,16 +24,30 @@ $(document).ready(function () {
     // Create the list element:
     var list = document.createElement("ul");
 
+    var options = $.extend(
+      {}, // empty object
+      $.datepicker.regional["en-US"],
+      {
+        dateFormat: "dd/mm/yy",
+      } // your custom options
+    );
+
     for (var i = 0; i < array.length; i++) {
       // Create the list item:
-      var item = document.createElement("li");
 
-      // Set its contents:
-      item.appendChild(
-        document.createTextNode(array[i].nombre + " $" + array[i].precio)
+      $(list).append(
+        `<li class="lista-prod"><p class="nombre-sesion"> ` +
+          array[i].nombre +
+          ` </p><p class="precio">  $ ` +
+          array[i].precio +
+          `</p></li>`
       );
-      // Add it to the list:
-      list.appendChild(item);
+      $("#calendar").append(
+        `<input type="text" id="datepicker-` +
+          i +
+          `" placeholder="Elegí una fecha">`
+      );
+      $("#datepicker-" + i).datepicker(options);
     }
 
     // Finally, return the constructed list:
@@ -52,22 +66,13 @@ $(document).ready(function () {
 
   //PASO 2 : AGENDA
 
-  var options = $.extend(
-    {}, // empty object
-    $.datepicker.regional["en-US"],
-    {
-      dateFormat: "mm/dd/yy",
-    } // your custom options
-  );
-
-  $("#datepicker").datepicker(options);
-
   $("#boton-agenda").click(saveInfo);
 
   function saveInfo() {
     var kart = JSON.parse(localStorage.getItem("carrito"));
-    let datePicker = $("#datepicker").val();
     for (var j = 0; j < kart.length; j++) {
+      let datePicker = $("#datepicker-" + j).val();
+
       kart[j].fecha = datePicker;
     }
     localStorage.setItem("carrito", JSON.stringify(kart));
@@ -84,7 +89,11 @@ $(document).ready(function () {
     reserva = JSON.parse(reserva);
     for (var x = 0; x < reserva.length; x++) {
       $("#listaFinal").append(
-        "<li>" + reserva[x].nombre + " " + reserva[x].fecha + "</li>"
+        `<li><p>` +
+          reserva[x].nombre +
+          `</p><p>` +
+          reserva[x].fecha +
+          `</p></li>`
       );
     }
   });
